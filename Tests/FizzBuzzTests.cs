@@ -20,5 +20,18 @@ namespace FizzBuzz.Tests
             var actualResult = checker.GetResultString();
             Assert.Equal("Fizz", actualResult);
         }
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(10)]
+        public void NumberDivisibleBy5_Not3_ReturnsBuzz(int number)
+        {
+            INumberChecker checker = (INumberChecker)new BuzzRule();
+            bool IsValid = checker.IsValid(number);
+            Assert.True(IsValid);
+
+            var actualResult = checker.GetResultString();
+            Assert.Equal("Buzz", actualResult);
+        }
     }
 }

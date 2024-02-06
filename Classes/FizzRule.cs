@@ -3,7 +3,7 @@ using FizzBuzz.Interface;
 
 namespace FizzBuzz.Classes
 {
-    public class FizzRule : INumberChecker
+    internal class FizzRule : INumberChecker
     {
         public string GetResultString()
         {
