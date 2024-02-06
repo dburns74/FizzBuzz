@@ -13,6 +13,24 @@ namespace FizzBuzz.Classes
         public void Run()
         {
             GetNumberCheckers();
+
+            for(int i=1;i<=100;i++)
+            {
+                Console.WriteLine(GetResultString(i));
+            }
+        }
+
+        private string GetResultString (int number)
+        {
+            //check if rule applies to number and output the rule result or just return the number as a string
+            foreach(INumberChecker checker in _numberCheckers)
+            {
+                if(checker.IsValid(number))
+                {
+                    return checker.GetResultString();
+                }
+            }
+            return number.ToString();
         }
 
         private void GetNumberCheckers()
