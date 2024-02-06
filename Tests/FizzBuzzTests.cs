@@ -9,7 +9,7 @@ namespace FizzBuzz.Tests
     public class FizzBuzzTests
     {
         [Theory]
-        [InlineData(2)]
+        [InlineData(3)]
         [InlineData(6)]
         public void NumberDivisibleBy3_Not5_ReturnsFizz(int number)
         {
