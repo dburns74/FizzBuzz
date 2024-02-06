@@ -6,12 +6,16 @@ namespace FizzBuzz.Classes
     {
         public string GetResultString()
         {
-            throw new NotImplementedException();
+            return "FizzBuzz";
         }
 
         public bool IsValid(int number)
         {
-            throw new NotImplementedException();
+            if (number % 15 == 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
